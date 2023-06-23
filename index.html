@@ -1,20 +1,73 @@
-Hello World
 <head>
     <style>
-        img{
-            max-width: 50vw;
+        img, video {
+            width: 50%
         }
-        
     </style>
 </head>
 
-<div>
-    <h2>5 year heatmaps all ships</h2>
-    <p>All shown 5 year heatmaps are in 1000m resolution. It takes ~30 seconds to render from request start.</p>
-    <h3>Count heatmap</h3>
-    <img src="./media/5-year-count-all-ships.png"/>
-    <h3>Time heatmap</h3>
-    <img src="./media/5-year-time-all-ships.png"/>
-    <h3>Minimum Draught Heatmap</h3>
-    <img src="./media/5-year-draught-all-ships.png"
-</div>
+<body>
+    <div>
+        <h1>DIPAAL API result samples</h1>
+        <p>This is a small sample of the results DIPAAL is capable of producing. The API specification can be found on
+            <a href="https://dipaal.dk" target="_blank">https://dipaal.dk</a>
+        </p>
+        <div>
+            <h2>5 year heatmaps all ships</h2>
+            <p>All shown 5 year heatmaps are in 1000m resolution. It takes ~30 seconds to render from request start.</p>
+            <h3>Count heatmap</h3>
+            <p>Unit is number of occurences.</p>
+            <img src="./media/5-year-count-all-ships.png" />
+            <h3>Time heatmap</h3>
+            <p>Unit is sum of time spent in the cell in seconds.</p>
+            <img src="./media/5-year-time-all-ships.png" />
+            <h3>Maximum Draught Heatmap</h3>
+            <p>Unit is the maximum observed draught observed in a cell in meters.</p>
+            <img src="./media/5-year-draught-all-ships.png" </div>
+        </div>
+        <div>
+            <h2>Cargo 2011 vs 2022</h2>
+            <p>Using the MapAlgebra feature, these rasters show the difference between heatmaps of 2022 and 2011. Positive numbers indicate higher heat in 2022 than 2011, and vice versa.</p>
+            <h3>Count heatmap</h3>
+            <p>Unit is number of occurences.</p>
+            <img src="./media/cargo-2021-vs-2011-count.png" />
+            <h3>Time heatmap</h3>
+            <p>Unit is sum of time spent in the cell in seconds.</p>
+            <img src="./media/cargo-2021-vs-2011-time.png" />
+        </div>
+        <div>
+            <h2>Video Animations</h2>
+            <p>The API is capable of generating videos, combining multiple rasters.</p>
+            <h3>Monthly Count Heatmap of 2022 - Class A ships only</h3>
+            <p>Unit is number of occurences per month.</p>
+            <video controls>
+                <source src="media/monthly-class-a-2022.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h3>Monthly Count Heatmap of 2022 - Class B ships only</h3>
+            <p>Unit is number of occurences per month.</p>
+            <video controls>
+                <source src="media/monthly-class-b-2022.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h3>Weekly Time Heatmap of 2021 - All ships</h3>
+            <p>Unit is the sum of time spent in the cell in seconds.</p>
+            <video controls>
+                <source src="media/weekly-all-ships-2021.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h3>Monthly Time Heatmap of 2019 - Fishing</h3>
+            <p>Unit is the sum of time spent in the cell in seconds.</p>
+            <video controls>
+                <source src="media/monthly-fishing-2019-time.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <h3>Monthly Delta Heading Heatmap of 2021 - Fishing</h3>
+            <p>Unit is the average change in heading inside a cell in degrees.</p>
+            <video controls>
+                <source src="media/monthly-fishing-2019-delta-heading.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
